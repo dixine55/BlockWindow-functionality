@@ -2,9 +2,6 @@
 //> using option -unchecked -deprecation -Wunused:all -Wvalue-discard -Ysafe-init
 //> using lib se.lth.cs::introprog::1.3.1
 
-package blockinstance
-import java.awt.Color.*
-
 @main
 def run: Unit = 
   BlockInstance().start()
@@ -14,12 +11,11 @@ class BlockInstance extends introprog.BlockGame(
   title                 = "BlockInstance",
   dim                   = (20,20),
   blockSize             = 30,
-  background            = BLACK,
+  background            = java.awt.Color.BLACK,
   framesPerSecond       = 50,
   messageAreaHeight     = 1,
-  messageAreaBackground = DARK_GRAY
+  messageAreaBackground =  java.awt.Color.DARK_GRAY
 ):
-
 
     var movesPerSecond: Double = 1
 
